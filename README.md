@@ -29,12 +29,11 @@ $ go run main.go
 ```
 
 ## Variables de entorno
-
-DB_USER=
-DB_PASSWORD=
-DB_NAME=
-DB_HOST=
-MYSQL_ROOT_PASSWORD=
-DB_PORT=
-USER_ADMIN=
-PASSWORD_ADMIN=
+<p>DB_USER</p>
+<p>DB_PASSWORD</p>
+<p>DB_NAME</p>
+<p>DB_HOST</p>
+<p>MYSQL_ROOT_PASSWORD</p>
+<p>DB_PORT</p>
+<p>USER_ADMIN</p>
+<p>PASSWORD_ADMIN</p>
