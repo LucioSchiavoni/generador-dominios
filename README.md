@@ -11,8 +11,8 @@ Una manera rapida y sencilla para los tecnicos de cambiar nombres de dominio en 
 
 ## Como utilizarlo
 
--Descarga el proyecto
--Dentro de la carpeta /cmd click derecho en el archivo generar-nombre.exe como administrador
+<p>-Descarga el proyecto</p>
+<p>-Dentro de la carpeta /cmd click derecho en el archivo generar-nombre.exe como administrador </p>
 
 
 ## Ejecucion con comandos (debes tener go instalado)
