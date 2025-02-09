@@ -10,7 +10,7 @@
 Una manera rapida y sencilla para los tecnicos de cambiar nombres de dominio en la red del MEC.
 
 ## Como utilizarlo
-
+<p>-Se necesitan credenciales de administrador de la red</p>
 <p>-Descarga el proyecto</p>
 <p>-Dentro de la carpeta /cmd click derecho en el archivo generar-nombre.exe como administrador </p>
 
