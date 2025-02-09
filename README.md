@@ -19,7 +19,7 @@ Una manera rapida y sencilla para los tecnicos de cambiar nombres de dominio en 
 
 ```bash
 # clona el repositorio
-$ git clone [ ]
+$ git clone https://github.com/LucioSchiavoni/generador-dominios.git
 
 # Ingresa a la carpeta /cmd
 $ cd cmd
