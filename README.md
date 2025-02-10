@@ -10,16 +10,16 @@
 Una manera rapida y sencilla para los tecnicos de cambiar nombres de dominio en la red del MEC.
 
 ## Como utilizarlo
-
--Descarga el proyecto
--Dentro de la carpeta /cmd click derecho en el archivo generar-nombre.exe como administrador
+<p>-Se necesitan credenciales de administrador de la red</p>
+<p>-Descarga el proyecto</p>
+<p>-Dentro de la carpeta /cmd click derecho en el archivo generar-nombre.exe como administrador </p>
 
 
 ## Ejecucion con comandos (debes tener go instalado)
 
 ```bash
 # clona el repositorio
-$ git clone [ ]
+$ git clone https://github.com/LucioSchiavoni/generador-dominios.git
 
 # Ingresa a la carpeta /cmd
 $ cd cmd
@@ -29,12 +29,11 @@ $ go run main.go
 ```
 
 ## Variables de entorno
-
-DB_USER=
-DB_PASSWORD=
-DB_NAME=
-DB_HOST=
-MYSQL_ROOT_PASSWORD=
-DB_PORT=
-USER_ADMIN=
-PASSWORD_ADMIN=
+<p>DB_USER</p>
+<p>DB_PASSWORD</p>
+<p>DB_NAME</p>
+<p>DB_HOST</p>
+<p>MYSQL_ROOT_PASSWORD</p>
+<p>DB_PORT</p>
+<p>USER_ADMIN</p>
+<p>PASSWORD_ADMIN</p>
