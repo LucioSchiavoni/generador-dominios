@@ -9,7 +9,7 @@ func SavePcRepository(namePc string) error {
 	_, err := config.DB.Exec(query, namePc)
 
 	if err != nil {
-		println("Error al guardar el nombre del PC en la base de datos:", err)
+		println("Se reporto un error al querer guardar el nombre en la base de datos:", err)
 	}
 	return nil
 }

@@ -10,7 +10,7 @@ import (
 func AskForConfirmation(newPCName string) bool {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Nuevo Nombre del PC:", newPCName)
-	fmt.Println("¿Estás seguro de que deseas cambiar el nombre del PC? (s/n): ")
+	fmt.Println("Estas seguro de que deseas cambiar el nombre del PC? (s/n): ")
 	response, _ := reader.ReadString('\n')
 	response = strings.TrimSpace(response)
 	return response == "s" || response == "S"

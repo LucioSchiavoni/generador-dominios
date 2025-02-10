@@ -11,7 +11,7 @@ type RenamePcParams struct {
 
 func RenamePC(params RenamePcParams) error {
 	if params.NewName == "" {
-		return fmt.Errorf("❌ Error: el nuevo nombre del PC no puede estar vacío")
+		return fmt.Errorf("❌ Error: el nuevo nombre del PC no puede estar vacio")
 	}
 
 	fmt.Printf("🔹 Cambiando nombre del PC a: %s\n", params.NewName)

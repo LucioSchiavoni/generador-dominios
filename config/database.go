@@ -31,7 +31,6 @@ func ConnectDB() error {
 	if err != nil {
 		log.Fatalf("❌ No se pudo conectar a la base de datos: %v", err)
 	}
-	fmt.Println("✅Connected to database!!")
 	DB = db
 	return nil
 
