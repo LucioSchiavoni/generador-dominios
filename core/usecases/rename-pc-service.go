@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"generador-dominios/core/repository"
 	"log"
-	"os"
 )
 
 func RenamePCService() error {
@@ -29,11 +28,7 @@ func RenamePCService() error {
 		return nil
 	}
 
-	err = repository.RenamePC(repository.RenamePcParams{
-		NewName:       newPCName,
-		UserAdmin:     os.Getenv("USER_ADMIN"),
-		PasswordAdmin: os.Getenv("PASSWORD_ADMIN"),
-	})
+	err = repository.RenamePC(repository.RenamePcParams{NewName: newPCName})
 
 	if err != nil {
 		log.Fatal("❌ No se pudo cambiar el nombre del PC:", err)

@@ -6,22 +6,25 @@ import (
 )
 
 type RenamePcParams struct {
-	NewName       string
-	UserAdmin     string
-	PasswordAdmin string
+	NewName string
 }
 
 func RenamePC(params RenamePcParams) error {
+	if params.NewName == "" {
+		return fmt.Errorf("❌ Error: el nuevo nombre del PC no puede estar vacío")
+	}
 
-	powershellCmd := fmt.Sprintf(`$password = ConvertTo-SecureString "%s" -AsPlainText -Force; 
-    $credential = New-Object System.Management.Automation.PSCredential ("%s", $password);
-    Rename-Computer -NewName "%s" -Credential $credential -Force -Restart`, params.PasswordAdmin, params.UserAdmin, params.NewName)
+	fmt.Printf("🔹 Cambiando nombre del PC a: %s\n", params.NewName)
 
-	cmd := exec.Command("powershell", "-Command", powershellCmd)
+	powershellCmd := fmt.Sprintf(`Rename-Computer -NewName "%s" -Force -Restart`, params.NewName)
+
+	cmd := exec.Command("powershell", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-Command", powershellCmd)
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		return fmt.Errorf("error al cambiar el nombre del PC: %v\nSalida del comando: %s", err, output)
+		return fmt.Errorf("❌ Error al cambiar el nombre del PC: %v\nSalida del comando: %s", err, output)
 	}
+
+	fmt.Println("✅ Cambio de nombre exitoso, reiniciando...")
 	return nil
 }
