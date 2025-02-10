@@ -20,7 +20,7 @@ func RenamePCService() error {
 		log.Fatal("❌ Error al obtener el número incremental:", err)
 	}
 
-	newPCName := fmt.Sprintf("PC-%s-%s-%s", unidad, oficina, nextNumber)
+	newPCName := fmt.Sprintf("%s-PC-%s-%s", unidad, oficina, nextNumber)
 
 	confirm := repository.AskForConfirmation(newPCName)
 	if !confirm {
