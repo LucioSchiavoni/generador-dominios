@@ -16,9 +16,9 @@ func RenamePC(params RenamePcParams) error {
 
 	fmt.Printf("🔹 Cambiando nombre del PC a: %s\n", params.NewName)
 
-	powershellCmd := fmt.Sprintf(`Rename-Computer -NewName "%s" -Force -Restart`, params.NewName)
+	powershellCmd := fmt.Sprintf(`$cred = Get-Credential; Rename-Computer -NewName "%s" -DomainCredential $cred -Force -Restart`, params.NewName)
 
-	cmd := exec.Command("powershell", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-Command", powershellCmd)
+	cmd := exec.Command("powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", powershellCmd)
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
