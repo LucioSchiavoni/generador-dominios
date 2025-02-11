@@ -27,7 +27,10 @@ func RenamePCService() error {
 		fmt.Println("❌ Cambio de nombre del PC cancelado.")
 		return nil
 	}
-
+	err = repository.SavePcRepository(newPCName)
+	if err != nil {
+		log.Fatal("❌ No se pudo guardar el nombre del PC:", err)
+	}
 	err = repository.RenamePC(repository.RenamePcParams{NewName: newPCName})
 
 	if err != nil {
